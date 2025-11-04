@@ -26,7 +26,7 @@ namespace Content.Client.Height
             if (TryComp<HumanoidAppearanceComponent>(ent, out var humanoid) && CheckSpeciesEntity(humanoid))
                 return;
 
-            _sprite.LayerSetScale(ent.Owner, 0, new Vector2(0.85f, 0.85f));
+            _sprite.SetScale(ent.Owner, new Vector2(0.85f, 0.85f));
         }
 
         private void OnBigHeightComponentStartup(Entity<BigHeightComponent> ent, ref ComponentStartup args)
@@ -34,7 +34,7 @@ namespace Content.Client.Height
             if (TryComp<HumanoidAppearanceComponent>(ent, out var humanoid) && CheckSpeciesEntity(humanoid))
                 return;
 
-            _sprite.LayerSetScale(ent.Owner, 0, new Vector2(1.2f, 1.2f));
+            _sprite.SetScale(ent.Owner, new Vector2(1.2f, 1.2f));
         }
 
         private void OnSmallHeightComponentShutdown(Entity<SmallHeightComponent> ent, ref ComponentShutdown args)
@@ -42,7 +42,7 @@ namespace Content.Client.Height
             if (TryComp<HumanoidAppearanceComponent>(ent, out var humanoid) && CheckSpeciesEntity(humanoid))
                 return;
 
-            _sprite.LayerSetScale(ent.Owner, 0, new Vector2(1.0f, 1.0f));
+            _sprite.SetScale(ent.Owner, new Vector2(1.0f, 1.0f));
         }
 
         private void OnBigHeightComponentShutdown(Entity<BigHeightComponent> ent, ref ComponentShutdown args)
@@ -50,7 +50,7 @@ namespace Content.Client.Height
             if (TryComp<HumanoidAppearanceComponent>(ent, out var humanoid) && CheckSpeciesEntity(humanoid))
                 return;
 
-            _sprite.LayerSetScale(ent.Owner, 0, new Vector2(1.0f, 1.0f));
+            _sprite.SetScale(ent.Owner, new Vector2(1.0f, 1.0f));
         }
 
         private bool CheckSpeciesEntity(HumanoidAppearanceComponent humanoid)
